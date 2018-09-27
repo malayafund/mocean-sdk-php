@@ -2,14 +2,14 @@
 ##########################################################################################################
 // API key and secret configuration
 require_once '../vendor/autoload.php';
-$client = new Mocean\Client(new Mocean\Client\Credentials\Basic('MOCEAN_API_KEY', 'MOCEAN_API_SECRET'));
+$client = new Mocean\Client(new Mocean\Client\Credentials\Basic('e2ed6658', '0df76d92'));
 
 ##########################################################################################################
 // Send MT SMS
 
 $message = $client->message()->send([
     'mocean-to' => 'MOCEAN_TO',
-	'mocean-from' => 'MOCEAN_FROM',
+	'mocean-from' => 'REWARD4U',
 	'mocean-text' => 'Test message from the Mocean PHP Client', 
 ]);
 
@@ -20,7 +20,7 @@ echo $message; exit;
 
 $message = $client->message()->send([
     'mocean-to' => 'MOCEAN_TO',
-    'mocean-from' => 'MOCEAN_FROM',
+    'mocean-from' => 'REWARD4U',
 	'mocean-mclass' => 1,
     'mocean-text' => 'Test flash message from the Mocean PHP Client'
 ]);
